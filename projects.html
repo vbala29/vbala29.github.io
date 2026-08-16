@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Projects — Vikram Bala</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#fafaf9">
+</head>
+<body>
+
+	<nav class="site-nav">
+		<div class="wrap">
+			<a href="index.html" class="brand">Vikram Bala</a>
+			<ul>
+				<li><a href="index.html" class="nav-link">Home</a></li>
+				<li><a href="projects.html" class="nav-link active">Projects</a></li>
+				<li><a href="contact.html" class="nav-link">Contact</a></li>
+			</ul>
+			<span class="nav-indicator" aria-hidden="true"></span>
+		</div>
+	</nav>
+
+	<header class="hero">
+		<div class="wrap">
+			<h1>Projects</h1>
+			<p class="tagline tagline-sm">Some things I've built over the years, ordered mostly chronologically.</p>
+		</div>
+	</header>
+
+	<section class="block">
+		<div class="wrap">
+
+			<div class="project">
+				<h3>Parallex — Crowdsourced Distributed Computing Platform</h3>
+				<div class="stack">Python · JavaScript · Ray · RabbitMQ · gRPC · MongoDB · Express.js · Electron</div>
+				<ul class="bullets">
+					<li>Co-architected a peer-to-peer compute marketplace where participants monetize idle machines by executing users' distributed jobs.</li>
+					<li>Implemented a scheduler provisioning ephemeral Ray clusters, matching jobs to volunteer nodes by CPU, RAM, and locality.</li>
+					<li>Built a RabbitMQ control plane for cluster formation and teardown, detecting node failures via periodic gRPC heartbeats.</li>
+				</ul>
+				<div class="proj-links">
+					<a href="https://www.youtube.com/watch?v=Y0M4xetbjDM" target="_blank" rel="noopener">Demo</a>
+				</div>
+				<div class="awards">
+					<a class="award" href="https://academics.engineering.upenn.edu/senior-design/senior-design-winners/" target="_blank" rel="noopener">2024 University of Pennsylvania SEAS Leadership Award</a>
+					<span class="award">2024 University of Pennsylvania CIS Technical Innovation Award</span>
+				</div>
+			</div>
+
+			<div class="project">
+				<h3>Sharp — Distributed Web Search Engine</h3>
+				<div class="stack">Java · Python · AWS EC2</div>
+				<ul class="bullets">
+					<li>Built a distributed key-value store, RDD compute engine, HTTP server, and crawler powering a 1M-page search engine.</li>
+				</ul>
+				<div class="proj-links">
+					<a href="https://github.com/vbala29/Sharp" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://www.youtube.com/watch?v=Su4OcEUixOQ" target="_blank" rel="noopener">Demo</a>
+				</div>
+			</div>
+
+			<div class="project">
+				<h3>Peer-to-Peer File Sharing System (Chord DHT Protocol)</h3>
+				<div class="stack">C++14 · Pthreads · Distributed Hash Tables</div>
+				<ul class="bullets">
+					<li>Built a P2P network for sharing documents, enabled by the <a href="https://pdos.csail.mit.edu/papers/ton:chord/paper-ton.pdf" target="_blank" rel="noopener">Chord Distributed Hash Table Protocol</a>, with an efficient search engine to fulfill requests.</li>
+					<li>Inspired by P2P file sharing systems like Napster and Gnutella; used the Pthreads library for multithreading, with custom serialization, buffering, and transmit/receive methods to deliver data within the Chord network.</li>
+				</ul>
+				<div class="proj-links">
+					<a href="https://github.com/vbala29/Chord-P2P-File-Searching" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://drive.google.com/file/d/11L2ebeiGS6fNdVGmQE208krWLMUKk6f2/view" target="_blank" rel="noopener">Demo</a>
+				</div>
+			</div>
+
+			<div class="project">
+				<h3>PennOS — A Unix-Like Operating System</h3>
+				<div class="stack">C · Linux · ucontext</div>
+				<ul class="bullets">
+					<li>Built a Unix-like operating system in C that runs on top of Linux, including PennShell — a shell with built-ins for redirection, piping, process creation/management, and file system access.</li>
+					<li>Implemented a kernel with a partial implementation of the POSIX API using the ucontext library for multithreading, plus a FAT filesystem with a user-level API for creating files/executables, managing permissions, and renaming/moving files.</li>
+				</ul>
+			</div>
+
+			<div class="project">
+				<h3>Accumulator Management System — Battery Monitoring PCB</h3>
+				<div class="stack">C++ · STM32 · Altium PCB Design</div>
+				<ul class="bullets">
+					<li>Led the design of a cell balancing and monitoring PCB for a 112-cell battery accumulator on Penn Electric Racing's Formula SAE electric racecar.</li>
+					<li>Programmed STM32 microcontrollers to communicate with a chain of 8 monitoring boards, performing real-time data collection and validation.</li>
+				</ul>
+				<div class="proj-links">
+					<a href="https://www.pennelectricracing.com" target="_blank" rel="noopener">Team Site</a>
+				</div>
+			</div>
+
+			<div class="project">
+				<h3>Jazz Improvisation Bot</h3>
+				<div class="stack">Node.js · Express.js · MongoDB · AWS Lambda · AWS EC2</div>
+				<ul class="bullets">
+					<li>Built a website where users create chord changes, save compositions to their account, and run an improvisation bot to generate melodies, with tunable parameters like chord-substitution and rest probability.</li>
+					<li>Used AWS Lambda for the generation algorithm; hosted on an AWS EC2 instance.</li>
+				</ul>
+				<div class="proj-links">
+					<a href="https://github.com/vbala29/Jazz-Improv-Bot#readme" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://www.youtube.com/watch?v=O7x_HXQZmYQ" target="_blank" rel="noopener">Demo</a>
+				</div>
+			</div>
+
+			<div class="project">
+				<h3>SPLAT — Projectile Locating and Aiming Turret</h3>
+				<div class="stack">C · Atmega328p · Python/OpenCV</div>
+				<ul class="bullets">
+					<li>Inspired by real missile defense systems, employed a computer vision based approach to projectile tracking, using a laser mounted on a servo-motor controlled turret to "engage" projectiles.</li>
+					<li>Included an LCD radar display and a remote command website for monitoring turret metrics and control.</li>
+				</ul>
+				<div class="proj-links">
+					<a href="https://github.com/vbala29/Missile-Defense-System#readme" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://www.youtube.com/watch?v=s5mFUPCWUQY&feature=youtu.be" target="_blank" rel="noopener">Demo</a>
+				</div>
+			</div>
+
+			<div class="project">
+				<h3>Modeling FIFA Players' Transfer Value</h3>
+				<div class="stack">Python</div>
+				<ul class="bullets">
+					<li>Inspired by recent suspicions of fraud in the valuation of players in international soccer trades, explored FIFA datasets over 5 years.</li>
+					<li>Performed EDA on trends related to the wages and skills of players across leagues, before subsequently creating different models (Random Forest, Regressions, etc.) to predict a player's transfer value based on a set of chosen attributes.</li>
+				</ul>
+				<div class="proj-links">
+					<a href="https://github.com/vbala29/FIFA-Metrics-Modeling" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://medium.com/@vishaalkumar_21306/demystifying-the-fifa-algorithm-e391bce93ec9" target="_blank" rel="noopener">Write-up</a>
+				</div>
+			</div>
+
+			<div class="project">
+				<h3>Penn Course Swap</h3>
+				<div class="stack">Python · Flask · SQLite · HTML/CSS/JS</div>
+				<ul class="bullets">
+					<li>PennApps '21 Hackathon Submission. List the courses you want to enroll in but are unable to, and the ones you are in but are willing to drop.</li>
+					<li>The software uses first-come, first-served priority to find potential matches for you to swap courses with to get your classes!</li>
+				</ul>
+				<div class="proj-links">
+					<a href="https://github.com/vbala29/PennCourseSwap#readme" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://www.youtube.com/watch?v=8wm4JthXBTk" target="_blank" rel="noopener">Demo</a>
+				</div>
+			</div>
+
+			<div class="project">
+				<h3>Connect-4 AI and Multithreaded Server</h3>
+				<div class="stack">Java · Java Swing</div>
+				<ul class="bullets">
+					<li>Created a minimax based Connect-4 AI and used Java Swing to create a MVC based GUI for users to play against the AI.</li>
+					<li>Designed a custom multithreaded TCP accounts server to communicate with the client-facing game application.</li>
+				</ul>
+				<div class="proj-links">
+					<a href="https://github.com/vbala29/TCP-Connect-4-AI#readme" target="_blank" rel="noopener">GitHub</a>
+				</div>
+			</div>
+
+			<div class="project">
+				<h3>Satellite-Based Flight Radar</h3>
+				<div class="stack">C++/Arduino · Atmega328p · Java</div>
+				<ul class="bullets">
+					<li>Given the 2020 FAA mandate of ADS-B transponders in most U.S. aircraft, designed a flight radar system that uses ADS-B satellite data to display live information about nearby aircraft.</li>
+					<li>Consists of data retrieval software (Java), as well as a hardware display with stepper-actuated gauges, an I&sup2;C LCD display, and buttons controlled by two Atmega328p microcontrollers (C++/ArduinoIDE).</li>
+				</ul>
+				<div class="proj-links">
+					<a href="https://github.com/vbala29/ADS-B-Arduino-Flight-Radar#readme" target="_blank" rel="noopener">GitHub</a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer class="site-footer">
+		<div class="wrap">
+			<div class="links">
+				<a href="https://github.com/vbala29" target="_blank" rel="noopener">GitHub</a>
+				<a href="https://www.linkedin.com/in/vikram-bala/" target="_blank" rel="noopener">LinkedIn</a>
+				<a href="mailto:vikrambala2002@gmail.com">Email</a>
+			</div>
+			<div class="copyright">&copy; 2026 Vikram Bala</div>
+		</div>
+	</footer>
+
+	<script src="js/main.js" defer></script>
+</body>
+</html>
