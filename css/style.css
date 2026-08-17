@@ -216,10 +216,27 @@ section.block h2::after {
 
 /* ---------- Experience ---------- */
 .entry {
+  display: flex;
+  gap: 16px;
   padding: 20px 0;
   border-bottom: 1px solid var(--border);
 }
 .entry:last-child { border-bottom: none; }
+.entry-logo {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px;
+  margin-top: 2px;
+}
+.entry-body {
+  flex: 1;
+  min-width: 0;
+}
 .entry-head {
   display: flex;
   justify-content: space-between;
@@ -228,11 +245,11 @@ section.block h2::after {
   flex-wrap: wrap;
   margin-bottom: 6px;
 }
-.entry-head .role {
+.entry-head .company-line {
   font-weight: 650;
   font-size: 1.04rem;
 }
-.entry-head .role .company {
+.entry-head .company-line .location {
   font-weight: 500;
   color: var(--text-muted);
 }
@@ -241,6 +258,12 @@ section.block h2::after {
   font-family: var(--font-mono);
   font-size: 0.82rem;
   white-space: nowrap;
+}
+.entry .role {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 10px;
 }
 .entry ul.bullets li {
   position: relative;
